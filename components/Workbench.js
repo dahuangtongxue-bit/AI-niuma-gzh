@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import EmployeeCard from './EmployeeCard';
+import DnaBar from './DnaBar';
 import WorkLog from './WorkLog';
 import ArticleCard from './ArticleCard';
 import FeedPanel from './FeedPanel';
@@ -73,6 +74,8 @@ export default function Workbench({ profile, onRetrain }) {
           <button className="btn btnGhost btnSmall" onClick={onRetrain}>重新培训（改档案）</button>
         </div>
       </header>
+
+      <DnaBar />
 
       <div className="modeTabs">
         <button className={`modeTab ${mode === 'feed' ? 'on' : ''}`} onClick={() => status !== 'working' && setMode('feed')}>
